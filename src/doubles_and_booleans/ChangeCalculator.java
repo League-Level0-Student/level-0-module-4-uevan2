@@ -12,20 +12,28 @@ import javax.swing.JOptionPane;
  */
 public class ChangeCalculator {
 
+	
+
 	public static void main(String[] args) {
 
-		// Ask the user how many nickels they have
-
-		// Convert their answer to an int using Integer.parseInt()
-
-		// Ask the user how many dimes they have, and convert their answer
-
-		// Ask the user how many quarters they have, and convert their answer
-
-		// Calculate how much money the user has and save it in a double variable 
-
-		// Tell the user how much money they have
-
+		String sNickels = JOptionPane.showInputDialog("How many nickels do you have?");
+		double iNickels = Integer.parseInt(sNickels);
+		iNickels = iNickels * .05;
+		
+		String sQuarters = JOptionPane.showInputDialog("How many quarters do you have?");
+		double iQuarters = Integer.parseInt(sQuarters);
+		iQuarters = iQuarters * .25;
+		
+		String sDimes = JOptionPane.showInputDialog("How many dimes do you have?");
+		double iDimes = Integer.parseInt(sDimes);
+		iDimes = iDimes * .1;
+		
+		String sPennies = JOptionPane.showInputDialog("How many pennies do you have?");
+		double iPennies = Integer.parseInt(sPennies);
+		iPennies = iPennies * .01;
+		
+		double money = iPennies + iNickels + iDimes + iQuarters;
+		JOptionPane.showMessageDialog(null, "You have "+money+"$ in your pocket.");
 	}
 }
 
